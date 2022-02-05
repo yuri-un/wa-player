@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html, body{
+    background-color: gray;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:16px;
+    height:100vh;
+}
+
+#wa-player-ui{
+    display:grid;
+
+    grid-template-areas:
+                        "header"
+                        "main"
+                        "list"
+                        "playback"
+                        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows:repeat(5, 1fr);
+    gap:5px;
+
+    background-color: beige;
+}
+
+.wa-section{
+    background-color: aliceblue;
+}
+
+.player > #title{
+    grid-area:header;
+}
+
+.player > #main{
+    grid-area:main;
+}
+
+.player > #list{
+    grid-area:list;
+}
+
+.player > #playback{
+    grid-area:playback;
+}
+
+.player > #info{
+    grid-area:footer;
+}
